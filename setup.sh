@@ -32,5 +32,5 @@ install_plugin https://github.com/zsh-users/zsh-autosuggestions
 install_plugin https://github.com/zsh-users/zsh-syntax-highlighting
 
 git clone --recurse-submodules https://github.com/Aidenable/server-dotfiles.git _
-rm -rf ~/.zshrc
+rm -rf ~/.zshrc ~/.p10k.zsh ~/.tmux.conf ~/.config/starship.toml
 cd ~/_ && stow --restow */ && cd ~/
