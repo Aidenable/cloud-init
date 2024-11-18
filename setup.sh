@@ -3,7 +3,7 @@
 cd ~/
 sudo apt update && sudo apt install -y git stow vim neofetch zsh tmux ripgrep unzip
 
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim
 
@@ -17,7 +17,7 @@ fc-cache -fv
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
 
-yes | curl -sS https://starship.rs/install.sh | sh
+FORCE=y sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 ZSH_PLUGINS=~/.oh-my-zsh/custom/plugins
 install_plugin() {
