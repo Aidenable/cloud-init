@@ -1,11 +1,7 @@
 #!/bin/sh
 
 cd ~/
-sudo apt update && sudo apt install -y git stow vim neofetch zsh tmux ripgrep unzip
-
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
-sudo apt update
-sudo apt install neovim
+sudo apt update && sudo apt install -y git stow vim neovim neofetch zsh tmux ripgrep unzip
 
 NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 FONT_DIR="$HOME/.local/share/fonts"
@@ -36,4 +32,5 @@ install_plugin https://github.com/zsh-users/zsh-autosuggestions
 install_plugin https://github.com/zsh-users/zsh-syntax-highlighting
 
 git clone --recurse-submodules https://github.com/Aidenable/server-dotfiles.git _
+rm -rf ~/.zshrc
 cd ~/_ && stow --restow */ && cd ~/
