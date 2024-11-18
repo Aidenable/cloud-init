@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ~/
-sudo apt update && sudo apt install -y git stow vim neovim neofetch starship zsh tmux ripgrep
+sudo apt update && sudo apt install -y git stow vim neovim neofetch zsh tmux ripgrep
 
 NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 FONT_DIR="$HOME/.local/share/fonts"
@@ -12,6 +12,8 @@ fc-cache -fv
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
+
+curl -sS https://starship.rs/install.sh | sh
 
 ZSH_PLUGINS=~/.oh-my-zsh/custom/plugins
 install_plugin() {
