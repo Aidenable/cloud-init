@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ~/
-sudo apt update && sudo apt install -y git stow vim neovim neofetch zsh tmux ripgrep unzip
+sudo apt update && sudo apt install -y git stow vim neovim neofetch zsh tmux ripgrep unzip ranger
 
 NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 FONT_DIR="$HOME/.local/share/fonts"
